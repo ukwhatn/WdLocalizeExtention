@@ -1,0 +1,20 @@
+{
+    "name": "Wikidot日本語化拡張",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Wikidotに日本語を覚え直させる拡張機能です。",
+    "author": "Yuuki Watanabe / ukwhatn",
+    "permissions": [
+    "storage",
+	"*://*.scp-wiki.net/*", "*://*.wikidot.com/*"
+  ],
+    "content_scripts": [{
+        "matches": [
+			"*://*.scp-wiki.net/*", "*://*.wikidot.com/*"
+		],
+        "js": [
+      "js/main.js"
+    ],
+        "run_at": "document_start"
+  }]
+}
