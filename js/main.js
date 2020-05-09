@@ -1,5 +1,5 @@
 function wikidot_main() {
-    if (document.getElementById("my-account") != null) {
+    if (document.getElementById("my-account")) {
         document.getElementById("my-account").innerHTML = "マイアカウント";
         document.querySelector("#account-options > ul > li:nth-child(1) > a").innerHTML = "アクティビティ";
         document.querySelector("#account-options > ul > li:nth-child(2) > a").innerHTML = "メッセージ";
@@ -9,11 +9,11 @@ function wikidot_main() {
         document.querySelector("#account-options > ul > li:nth-child(6) > a").innerHTML = "サインアウト";
     }
 
-    if (document.getElementById("search-top-box-input") != null) {
+    if (document.getElementById("search-top-box-input")) {
         document.getElementById("search-top-box-input").value = "このサイトを検索";
     }
 
-    if (document.getElementById("page-options-bottom") != null) {
+    if (document.getElementById("page-options-bottom")) {
         document.getElementById("edit-button").innerHTML = "編集";
 
         if (document.getElementById("pagerate-button") != null) {
@@ -25,7 +25,7 @@ function wikidot_main() {
 
         document.getElementById("tags-button").innerHTML = "タグ";
 
-        if (document.getElementById("discuss-button") != null) {
+        if (document.getElementById("discuss-button")) {
             var getdiscstr = document.getElementById("discuss-button").innerHTML;
             var splitdiscstr = getdiscstr.split(/\(|\)/);
             var discussionposts = splitdiscstr[1];
@@ -48,8 +48,32 @@ function wikidot_main() {
         document.getElementById("rename-move-button").innerHTML = "リネーム";
         document.getElementById("delete-button").innerHTML = "削除";
     }
+
+    try {
+        var ozone_show = OZONE.dialogs.Base.prototype.show;
+        OZONE.dialogs.Base.prototype.show = function() {
+            switch(this.content) {
+                case "Saving page...":
+                    this.content = "ページを保存中...";
+                    break;
+                case "Page saved!":
+                    this.content = "ページを保存しました";
+                    break;
+                case "Saving tags...":
+                    this.content = "タグを保存中...";
+                    break;
+                case "Tags saved!":
+                    this.content = "タグを保存しました";
+                    break;
+                default:
+                    break;
+            }
+            ozone_show.apply(this, arguments);
+        }
+    }catch(e) {
+        console.log("ダイアログの日本語化に失敗しました");
     
-    if (document.getElementById("thread-options-2") != null) {
+    if (document.getElementById("thread-options-2")) {
         document.getElementById("new-post-button").innerHTML = "新しいポスト";
     }
 };
