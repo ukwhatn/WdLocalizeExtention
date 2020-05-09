@@ -9,7 +9,7 @@
     "content_scripts": [
         {
             "matches": ["*://*.scp-wiki.net/*", "*://*.wikidot.com/*"],
-            "js": ["js/main.js", "js/ozone.js"],
+            "js": ["js/main.js", "js/ozone-loader.js"],
             "run_at": "document_start"
         },
         {

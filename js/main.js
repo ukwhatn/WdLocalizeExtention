@@ -9,12 +9,12 @@ function wikidot_main() {
         document.querySelector("#account-options > ul > li:nth-child(5) > a").innerHTML = "アップグレード";
         document.querySelector("#account-options > ul > li:nth-child(6) > a").innerHTML = "サインアウト";
     }
-    
+
     //Search Box
     if (document.getElementById("search-top-box-input")) {
         document.getElementById("search-top-box-input").value = "このサイトを検索";
     }
-    
+
     //Page-Options for NormalPages
     if (document.getElementById("page-options-bottom")) {
         document.getElementById("edit-button").innerHTML = "編集";
@@ -56,6 +56,9 @@ function wikidot_main() {
     if (document.getElementById("thread-options-2")) {
         document.getElementById("new-post-button").innerHTML = "新しいポスト";
     }
+
+    
+
 
 }
 
