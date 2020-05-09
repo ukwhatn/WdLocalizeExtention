@@ -1,4 +1,4 @@
-function runWDJP() {
+function wikidot_main() {
     if (document.getElementById("my-account")) {
         document.getElementById("my-account").innerHTML = "マイアカウント";
         document.querySelector("#account-options > ul > li:nth-child(1) > a").innerHTML = "アクティビティ";
@@ -13,7 +13,7 @@ function runWDJP() {
         document.getElementById("search-top-box-input").value = "このサイトを検索";
     }
 
-    if (document.getElementById("page-options-container")) {
+    if (document.getElementById("page-options-bottom")) {
         document.getElementById("edit-button").innerHTML = "編集";
 
         if (document.getElementById("pagerate-button") != null) {
@@ -48,6 +48,7 @@ function runWDJP() {
         document.getElementById("rename-move-button").innerHTML = "リネーム";
         document.getElementById("delete-button").innerHTML = "削除";
     }
+
     try {
         var ozone_show = OZONE.dialogs.Base.prototype.show;
         OZONE.dialogs.Base.prototype.show = function() {
@@ -71,7 +72,10 @@ function runWDJP() {
         }
     }catch(e) {
         console.log("ダイアログの日本語化に失敗しました");
+    
+    if (document.getElementById("thread-options-2")) {
+        document.getElementById("new-post-button").innerHTML = "新しいポスト";
     }
 };
 
-document.addEventListener("DOMContentLoaded", runWDJP);
+document.addEventListener("DOMContentLoaded", wikidot_main);
