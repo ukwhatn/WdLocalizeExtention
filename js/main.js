@@ -72,11 +72,12 @@ function wikidot_main() {
         }
     } catch (e) {
         console.log("ダイアログの日本語化に失敗しました");
-
-        if (document.getElementById("thread-options-2")) {
-            document.getElementById("new-post-button").innerHTML = "新しいポスト";
-        }
     }
+
+    if (document.getElementById("thread-options-2")) {
+        document.getElementById("new-post-button").innerHTML = "新しいポスト";
+    }
+
 }
 
 document.addEventListener("DOMContentLoaded", wikidot_main);
