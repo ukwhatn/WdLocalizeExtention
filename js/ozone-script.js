@@ -1,4 +1,8 @@
-   try {
+(function() {
+    if(!window.OZONE) {
+        return setTimeout(arguments.callee, 1000);
+    }
+    try {
        var ozone_show = OZONE.dialogs.Base.prototype.show;
        OZONE.dialogs.Base.prototype.show = function () {
            switch (this.content) {
@@ -22,3 +26,4 @@
    } catch (e) {
        console.log("ダイアログの日本語化に失敗しました");
    }
+})();
