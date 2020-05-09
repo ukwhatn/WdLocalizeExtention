@@ -51,8 +51,8 @@ function wikidot_main() {
 
     try {
         var ozone_show = OZONE.dialogs.Base.prototype.show;
-        OZONE.dialogs.Base.prototype.show = function() {
-            switch(this.content) {
+        OZONE.dialogs.Base.prototype.show = function () {
+            switch (this.content) {
                 case "Saving page...":
                     this.content = "ページを保存中...";
                     break;
@@ -70,12 +70,13 @@ function wikidot_main() {
             }
             ozone_show.apply(this, arguments);
         }
-    }catch(e) {
+    } catch (e) {
         console.log("ダイアログの日本語化に失敗しました");
-    
-    if (document.getElementById("thread-options-2")) {
-        document.getElementById("new-post-button").innerHTML = "新しいポスト";
+
+        if (document.getElementById("thread-options-2")) {
+            document.getElementById("new-post-button").innerHTML = "新しいポスト";
+        }
     }
-};
+}
 
 document.addEventListener("DOMContentLoaded", wikidot_main);
