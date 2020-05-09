@@ -1,4 +1,4 @@
-function runWDJP() {
+function wikidot_main() {
     if (document.getElementById("my-account") != null) {
         document.getElementById("my-account").innerHTML = "マイアカウント";
         document.querySelector("#account-options > ul > li:nth-child(1) > a").innerHTML = "アクティビティ";
@@ -13,7 +13,7 @@ function runWDJP() {
         document.getElementById("search-top-box-input").value = "このサイトを検索";
     }
 
-    if (document.getElementById("page-options-container") != null) {
+    if (document.getElementById("page-options-bottom") != null) {
         document.getElementById("edit-button").innerHTML = "編集";
 
         if (document.getElementById("pagerate-button") != null) {
@@ -48,6 +48,10 @@ function runWDJP() {
         document.getElementById("rename-move-button").innerHTML = "リネーム";
         document.getElementById("delete-button").innerHTML = "削除";
     }
+    
+    if (document.getElementById("thread-options-2") != null) {
+        document.getElementById("new-post-button").innerHTML = "新しいポスト";
+    }
 };
 
-document.addEventListener("DOMContentLoaded", runWDJP);
+document.addEventListener("DOMContentLoaded", wikidot_main);
