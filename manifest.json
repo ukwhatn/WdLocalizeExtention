@@ -5,10 +5,11 @@
     "description": "Wikidotに日本語を覚え直させる拡張機能です。",
     "author": "Yuuki Watanabe / ukwhatn",
     "permissions": ["storage", "*://*.scp-wiki.net/*", "*://*.wikidot.com/*"],
+    "web_accessible_resources": ["js/ozone-script.js"],
     "content_scripts": [
         {
             "matches": ["*://*.scp-wiki.net/*", "*://*.wikidot.com/*"],
-            "js": ["js/main.js"],
+            "js": ["js/main.js", "js/ozone.js"],
             "run_at": "document_start"
         },
         {
