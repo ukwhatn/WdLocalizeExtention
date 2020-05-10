@@ -18,7 +18,7 @@
             "run_at": "document_start"
         },
         {
-            "matches": ["*://*.wikidot.com/account/settings", "*://*.wikidot.com/account/settings#/*"],
+            "matches": ["*://*.wikidot.com/account/settings", "*://*.wikidot.com/account/settings#/account/*"],
             "js": ["js/account-settings.js"],
             "run_at": "document_start"
         }

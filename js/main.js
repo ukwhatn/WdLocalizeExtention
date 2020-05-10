@@ -1,4 +1,5 @@
 function wikidot_main() {
+    console.log("ヘッダ要素を日本語化します。")
     //Account Menu
     if (document.getElementById("my-account")) {
         document.getElementById("my-account").innerHTML = "マイアカウント";
@@ -16,6 +17,7 @@ function wikidot_main() {
     }
 
     //Page-Options for NormalPages
+    console.log("ページオプションを日本語化します。")
     if (document.getElementById("page-options-bottom")) {
         document.getElementById("edit-button").innerHTML = "編集";
 
@@ -56,7 +58,8 @@ function wikidot_main() {
     if (document.getElementById("thread-options-2")) {
         document.getElementById("new-post-button").innerHTML = "新しいポスト";
     }
-
+    
+    
     
 
 
