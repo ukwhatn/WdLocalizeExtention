@@ -1,6 +1,6 @@
 (function () {
     if (document.getElementsByTagName("body")[0]) {
-        console.log("bodyの読み込みが完了しました。")
+        console.log("bodyの読み込みが完了しました。ダイアログ日本語化スクリプトを挿入します。")
         var s, th;
         th = document.getElementsByTagName("body")[0];
         s = document.createElement('script');

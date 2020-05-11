@@ -58,9 +58,6 @@ function wikidot_main() {
     if (document.getElementById("thread-options-2")) {
         document.getElementById("new-post-button").innerHTML = "新しいポスト";
     }
-    
-    
-    
 
 
 }

@@ -28,7 +28,7 @@
             console.log("ダイアログの日本語化に失敗しました。");
         }
     } else {
-        console.log("OZONEが読み込まれていません。")
+        console.log("OZONEの読み込みを待っています。")
         return setTimeout(arguments.callee, 1000);
     }
 })();
