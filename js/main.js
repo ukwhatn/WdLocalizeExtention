@@ -21,7 +21,7 @@ function wikidot_main() {
     if (document.getElementById("page-options-bottom")) {
         document.getElementById("edit-button").innerHTML = "編集";
 
-        if (document.getElementById("pagerate-button") != null) {
+        if (document.getElementById("pagerate-button")) {
             var getratestr = document.getElementById("pagerate-button").innerHTML;
             var splitratestr = getratestr.split(/<|>/);
             var ratenum = splitratestr[2];
@@ -34,7 +34,11 @@ function wikidot_main() {
             var getdiscstr = document.getElementById("discuss-button").innerHTML;
             var splitdiscstr = getdiscstr.split(/\(|\)/);
             var discussionposts = splitdiscstr[1];
-            document.getElementById("discuss-button").innerHTML = "ディスカッション (" + discussionposts + ")";
+            if (discussionposts) {
+                document.getElementById("discuss-button").innerHTML = "ディスカッション(" + discussionposts + ")";
+            } else {
+                document.getElementById("discuss-button").innerHTML = "ディスカッション(0)";
+            }
         }
 
         document.getElementById("history-button").innerHTML = "履歴";
