@@ -7,7 +7,7 @@
     "default_icon": "icon.png"
   },
   "author": "Yuuki Watanabe / ukwhatn",
-  "permissions": ["storage", "*://*.scp-wiki.net/*", "*://*.wikidot.com/*"],
+  "permissions": ["*://*.scp-wiki.net/*", "*://*.wikidot.com/*"],
   "web_accessible_resources": ["js/ozone-script.js", "js/account-script.js"],
   "content_scripts": [
     {
