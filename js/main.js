@@ -1,14 +1,16 @@
+/*jshint esversion: 6*/
 function wikidot_main() {
     console.log("ヘッダ要素を日本語化します。");
     //Account Menu
     if (document.getElementById("my-account")) {
         document.getElementById("my-account").innerHTML = "マイアカウント";
-        document.querySelector("#account-options > ul > li:nth-child(1) > a").innerHTML = "アクティビティ";
-        document.querySelector("#account-options > ul > li:nth-child(2) > a").innerHTML = "メッセージ";
-        document.querySelector("#account-options > ul > li:nth-child(3) > a").innerHTML = "サイト";
-        document.querySelector("#account-options > ul > li:nth-child(4) > a").innerHTML = "アカウント設定";
-        document.querySelector("#account-options > ul > li:nth-child(5) > a").innerHTML = "アップグレード";
-        document.querySelector("#account-options > ul > li:nth-child(6) > a").innerHTML = "サインアウト";
+        let t = document.querySelectorAll("#account-options > ul > li > a");
+        t[0].innerHTML = "アクティビティ";
+        t[1].innerHTML = "メッセージ";
+        t[2].innerHTML = "サイト";
+        t[3].innerHTML = "アカウント設定";
+        t[4].innerHTML = "アップグレード";
+        t[5].innerHTML = "サインアウト";
     }
 
     //Search Box
