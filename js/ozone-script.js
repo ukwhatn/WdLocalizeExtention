@@ -21,14 +21,14 @@
                         break;
                 }
                 ozone_show.apply(this, arguments);
-            }
+            };
 
             console.log("ダイアログを日本語化しました。");
         } catch (e) {
             console.log("ダイアログの日本語化に失敗しました。");
         }
     } else {
-        console.log("OZONEの読み込みを待っています。")
+        console.log("OZONEの読み込みを待っています。");
         return setTimeout(arguments.callee, 1000);
     }
 })();

@@ -1,6 +1,6 @@
 function account_settings () {
     if (document.querySelector("#accordion > li.accordion-top[accordionname='screen'] > span.accordion-top-sp1")) {
-        console.log("アカウント情報の読み込みが完了しました。アカウント情報を日本語化しています。")
+        console.log("アカウント情報の読み込みが完了しました。アカウント情報を日本語化しています。");
 
 
         //AccountName
@@ -8,10 +8,10 @@ function account_settings () {
         document.querySelector("#accordion > li.accordion-top[accordionname='screen'] > span.accordion-top-sp3 > a").innerHTML = "変更";
 
         var accname = document.querySelector("#accordion > li.accordion-screen > h3").innerHTML.split(/<|>/)[2];
-        document.querySelector("#accordion > li.accordion-screen > h3").innerHTML = "現在のアカウント名: <strong>" + accname + "</strong>."
+        document.querySelector("#accordion > li.accordion-screen > h3").innerHTML = "現在のアカウント名: <strong>" + accname + "</strong>.";
 
         var accchangetime = document.querySelector("#accordion > li.accordion-screen > .alert").innerHTML.split(/<|>/)[6];
-        document.querySelector("#accordion > li.accordion-screen > .alert-warning").innerHTML = "アカウント名を変更できるのは<strong>2回</strong>までです。あと<strong>" + accchangetime + "回</strong>変更できます。"
+        document.querySelector("#accordion > li.accordion-screen > .alert-warning").innerHTML = "アカウント名を変更できるのは<strong>2回</strong>までです。あと<strong>" + accchangetime + "回</strong>変更できます。";
 
         document.querySelector("#accordion > li.accordion-screen > form > div.form-group > label[for='ap-screen-name-input']").innerHTML = "新しいアカウント名:";
         document.querySelector("#accordion > li.accordion-screen > form > div.form-group a[onclick*='.submit();']").innerHTML = "変更";
@@ -24,9 +24,9 @@ function account_settings () {
         document.querySelector("#accordion > li.accordion-top[accordionname='email'] > span.accordion-top-sp3 > a").innerHTML = "変更";
 
         var accemail = document.querySelector("#accordion > li.accordion-email > h3").innerHTML.split(/<|>/)[2];
-        document.querySelector("#accordion > li.accordion-email > h3").innerHTML = "現在のメールアドレス: <strong>" + accemail + "</strong>."
+        document.querySelector("#accordion > li.accordion-email > h3").innerHTML = "現在のメールアドレス: <strong>" + accemail + "</strong>.";
 
-        document.querySelector("#accordion > li.accordion-email > .alert-warning").innerHTML = "メールアドレスの変更はログイン時にも影響します。新しいメールアドレス（確認後）とパスワード（変更なし）が必要になります。"
+        document.querySelector("#accordion > li.accordion-email > .alert-warning").innerHTML = "メールアドレスの変更はログイン時にも影響します。新しいメールアドレス（確認後）とパスワード（変更なし）が必要になります。";
 
         document.querySelector("#accordion > li.accordion-email > #email-change-area > form > div.form-group > label[for='ch-email']").innerHTML = "新しいメールアドレス:";
         document.querySelector("#accordion > li.accordion-email p.help-block").innerHTML = "認証リンクが記載されたメールが送信されます。";
@@ -81,9 +81,9 @@ function account_settings () {
         document.querySelector("#accordion > li.accordion-delete > .alert-warning").innerHTML = "<strong>注:</strong> あなたは現在、いくつかのサイトの最高管理者になっています。サイトを削除するか、最高管理者権限を他のユーザーに移譲するまでアカウントを削除することは出来ません。" + " <a href='/account/sites#/master_admin' class='btn btn-default btn-xs'>ここをクリック</a> して、最高管理者になっているサイトを確認できます。";
 
         document.querySelector("#accordion > li.accordion-delete a[onclick*='WIKIDOT.modules.DSAccountModule.listeners.proceed(event);']").innerHTML = "アカウント削除を開始する";
-        console.log("アカウント情報を日本語化しました。")
+        console.log("アカウント情報を日本語化しました。");
     } else {
-        console.log("アカウント情報の読み込みを待っています。")
+        console.log("アカウント情報の読み込みを待っています。");
         return setTimeout(arguments.callee, 1000);
     }
 }

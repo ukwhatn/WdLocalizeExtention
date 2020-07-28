@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", account_settings);
 // load refresh functions
 (function () {
     if (document.getElementsByTagName("body")[0]) {
-        console.log("設定メニュー日本語化スクリプトを挿入します。")
+        console.log("設定メニュー日本語化スクリプトを挿入します。");
         var s, th;
         th = document.getElementsByTagName("body")[0];
         s = document.createElement('script');

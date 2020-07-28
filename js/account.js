@@ -12,6 +12,6 @@ function account_base() {
             return setTimeout(arguments.callee, 1000);
         }
     })();
-};
+}
 
 document.addEventListener("DOMContentLoaded", account_base);
