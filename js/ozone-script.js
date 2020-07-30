@@ -39,9 +39,9 @@ let t;
   if (document.querySelector("#odialog-container .title.modal-header")) {
     if (document.querySelector("#odialog-container .title.modal-header").innerHTML.includes("User info") && !document.querySelector("#odialog-container .table > tbody > tr > td > b").innerHTML.includes("本名")) {
       console.log("アカウント情報の表示を検出しました。日本語化を開始します。");
-      t = document.querySelectorAll("#odialog-container > .owindow > .modal-body .table > tbody > tr > td > b");
-      for (let step = 0; step < t.length; step++) {
-        t = t[step];
+      let ta = document.querySelectorAll("#odialog-container > .owindow > .modal-body .table > tbody > tr > td > b");
+      for (let step = 0; step < ta.length; step++) {
+        let t = ta[step];
         switch (t.innerHTML) {
           case "Real name":
             t.innerHTML = "本名";
