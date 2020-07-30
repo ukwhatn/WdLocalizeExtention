@@ -1,8 +1,8 @@
 {
   "name": "Wikidot日本語化拡張",
-  "version": "1.0.0",
+  "version": "1.1",
   "manifest_version": 2,
-  "description": "Wikidotに日本語を覚え直させます。",
+  "description": "Wikidotを日本語化します。",
   "browser_action": {
     "default_icon": "icon.png"
   },
