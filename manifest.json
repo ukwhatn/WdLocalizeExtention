@@ -1,6 +1,6 @@
 {
   "name": "Wikidot日本語化拡張",
-  "version": "1.1",
+  "version": "1.1.1",
   "manifest_version": 2,
   "description": "Wikidotを日本語化します。",
   "browser_action": {
